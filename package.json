@@ -1,0 +1,24 @@
+{
+  "name": "ractive-page",
+  "version": "1.6.0",
+  "description": "Plugin for RactiveJS to integrate PageJS router.",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build:cjs": "./node_modules/.bin/rollup ./src/index.js --output.format cjs --output.file ./dist/bundle.js",
+    "build:umd": "./node_modules/.bin/rollup ./src/index.js --output.format umd --name 'ractiveKit' --output.file ./dist/bundle.umd.js",
+    "build": "npm run build:cjs & npm run build:umd",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Maly",
+  "license": "MIT",
+  "dependencies": {
+    "page": "^1.8.4",
+    "qs": "^6.5.1"
+  },
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "rollup": "^0.54",
+    "rollup-plugin-babel": "^3.0.3"
+  }
+}
