@@ -57,8 +57,7 @@ function index (options, keypath) {
 			},
 			[`${instKeypath}.state ${instKeypath}.title`]: () => getter(keypath).save()
 		}, {
-			init: false,
-			strict: true
+			init: false
 		});
 
 		$$.on('teardown', () => {
