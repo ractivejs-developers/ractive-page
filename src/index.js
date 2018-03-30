@@ -92,7 +92,11 @@ export default function (options, keypath) {
 		}
 	
 		page('*', ctx => {
-			setter(keypath, ctx).then(() => $$.update(`${instKeypath}.params`));
+			setter(keypath, ctx).then(() => {
+				$$.update(`${instKeypath}.params`);
+				$$.update(`${instKeypath}.state`);
+				$$.update(`${instKeypath}.title`);
+			});
 		});
 	
 		page.start(options);

@@ -1,6 +1,6 @@
 {
   "name": "ractive-page",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Plugin for RactiveJS to integrate PageJS router.",
   "main": "dist/bundle.js",
   "scripts": {
